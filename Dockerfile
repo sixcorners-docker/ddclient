@@ -1,6 +1,8 @@
 FROM debian
 RUN apt-get update \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y ddclient \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+ ddclient \
+ ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 COPY docker-entrypoint.sh /usr/local/bin/
 USER daemon
