@@ -1,0 +1,5 @@
+Usage if using docker swarm:
+# change ddclient.conf so it contains the config you want then run:
+docker stack deploy ddclient --compose-file=docker-compose.yaml
+
+Create a ticket if you want to be able to feed in the config file other ways.
