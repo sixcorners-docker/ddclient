@@ -1,0 +1,11 @@
+version: "3.6"
+services:
+  ddclient:
+    image: sixcorners/ddclient
+    restart: unless-stopped
+    secrets:
+      - source: conf
+        target: /etc/ddclient.conf
+secrets:
+  conf:
+    file: ddclient.conf
